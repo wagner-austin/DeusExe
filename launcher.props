@@ -30,7 +30,7 @@
       <LargeAddressAware>true</LargeAddressAware>
     </Link>
     <PostBuildEvent>
-      <Command>copy "$(TargetPath) " "$(GAMEDIR)\system\"</Command>
+      <Command>if exist "$(GAMEDIR)\system\" copy "$(TargetPath) " "$(GAMEDIR)\system\"</Command>
     </PostBuildEvent>
     <PreBuildEvent>
       <Command>
