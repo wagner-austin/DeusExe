@@ -9,7 +9,7 @@
   </PropertyGroup>
   <ItemDefinitionGroup>
     <ClCompile>
-      <AdditionalIncludeDirectories>../../games/$(GAMENAME)/engine/inc;../../games/$(GAMENAME)/core/inc;../../games/$(GAMENAME)/window/inc;../../games/$(GAMENAME)/deusex/inc;../../games/$(GAMENAME)/extension/inc;../../detours/src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../games/$(GAMENAME)/engine/inc;../../games/$(GAMENAME)/core/inc;../../games/$(GAMENAME)/window/inc;../../games/$(GAMENAME)/deusex/inc;../../games/$(GAMENAME)/extension/inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>PROJECTNAME=L"$(ProjectName)";_USE_MATH_DEFINES;NOMINMAX;_REALLY_WANT_DEBUG;WINDOWS_IGNORE_PACKING_MISMATCH;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <StructMemberAlignment>4Bytes</StructMemberAlignment>
       <TreatWChar_tAsBuiltInType>false</TreatWChar_tAsBuiltInType>
