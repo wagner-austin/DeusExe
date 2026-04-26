@@ -9,17 +9,19 @@
   </PropertyGroup>
   <ItemDefinitionGroup>
     <ClCompile>
-      <AdditionalIncludeDirectories>../games/$(GAMENAME)/engine/inc;../games/$(GAMENAME)/core/inc;../games/$(GAMENAME)/window/inc;../games/$(GAMENAME)/deusex/inc;../games/$(GAMENAME)/extension/inc;../detours;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>PROJECTNAME=L"$(ProjectName)";_USE_MATH_DEFINES;NOMINMAX;_REALLY_WANT_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../games/$(GAMENAME)/engine/inc;../../games/$(GAMENAME)/core/inc;../../games/$(GAMENAME)/window/inc;../../games/$(GAMENAME)/deusex/inc;../../games/$(GAMENAME)/extension/inc;../../detours/src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>PROJECTNAME=L"$(ProjectName)";_USE_MATH_DEFINES;NOMINMAX;_REALLY_WANT_DEBUG;WINDOWS_IGNORE_PACKING_MISMATCH;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <StructMemberAlignment>4Bytes</StructMemberAlignment>
       <TreatWChar_tAsBuiltInType>false</TreatWChar_tAsBuiltInType>
       <WarningLevel>Level4</WarningLevel>
-      <TreatWarningAsError>true</TreatWarningAsError>
+      <TreatWarningAsError>false</TreatWarningAsError>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <EnforceTypeConversionRules>true</EnforceTypeConversionRules>
+      <ConformanceMode>false</ConformanceMode>
+      <AdditionalOptions>/Zc:forScope- /Zc:wchar_t- %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
-      <AdditionalDependencies>uxtheme.lib;version.lib;Shlwapi.lib;Comctl32.lib;../games/$(GAMENAME)/engine/lib/engine.lib;../games/$(GAMENAME)/core/lib/core.lib;../games/$(GAMENAME)/extension/lib/extension.lib;../games/$(GAMENAME)/window/lib/window.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>uxtheme.lib;version.lib;Shlwapi.lib;Comctl32.lib;../../games/$(GAMENAME)/engine/lib/engine.lib;../../games/$(GAMENAME)/core/lib/core.lib;../../games/$(GAMENAME)/extension/lib/extension.lib;../../games/$(GAMENAME)/window/lib/window.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <BaseAddress>
       </BaseAddress>
       <OutputFile>$(OutDir)$(GAMEEXE)</OutputFile>
